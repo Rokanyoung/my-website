@@ -1,2 +1,2 @@
 # my-website
-A personal website created for an trainee assessment
+A personal website created for a trainee assessment
