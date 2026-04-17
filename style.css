@@ -1,0 +1,282 @@
+:root {
+    --bg-color: rgba(255, 255, 255, 0.85);
+    --anchor-color: rgba(125, 5, 15, 1);
+    --text-color: rgba(35, 50, 50, 1);
+    --title-color: rgba(15, 30, 65, 1);
+    --bg-color2: rgba(65, 165, 235, 1);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'poppins', serif;
+    background-color: var(--bg-color);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0 10px;
+}
+
+.topbar {
+    grid-column: 1 / span 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 40px;
+}
+
+.topbar a  {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.topbar a:is(.mail):hover {
+    background-color: var(--bg-color2);
+    color: var(--anchor-color);
+    border-radius: 5px;
+}
+
+.social i:hover {
+    transition: transform 0.2s ease-in;
+    transform: scale(2);
+}
+
+.topbar span {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+i {
+    transform: scale(2, 1.5);
+    font-size: 1.4rem;
+    align-content: center;
+    text-align: center;
+    width: 14px;
+    height: 16px;
+    margin: 0 10px;
+    background-color: var(--bg-color2);
+    border-radius: 50%;
+    color: var(--anchor-color);
+}
+
+select {
+    font-size: 1.6rem;
+    font-family: arial, serif;
+    background-color: var(--bg-color2);
+    color: var(--anchor-color);
+}
+
+.navbar {
+    grid-column: 1 / span 3;
+    background-color: var(--title-color);
+    margin-bottom: 40px;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
+    height: 50px;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+}
+
+.header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: start;
+}
+
+.header nav ul li {
+    list-style: none;
+    background-color: var(--bg-color2);
+    box-shadow: ();
+    border: 1.2px dotted var(--anchor-color);
+    border-radius: 5px;
+    padding: 2.5px;
+    margin-top: 12px;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--anchor-color);
+}
+
+.header nav ul li a:hover {
+    background-color: var(--anchor-color);
+    color: var(--bg-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cross {
+    width: 100px;
+    height: 100px;
+    background-color: var(--anchor-color);
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.leftcrossup {
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.rightcrossup {
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.leftcrossdown {
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+}
+
+.rightcrossdown {
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+}
+
+header {
+    margin: 0 auto;
+    grid-column: 1 / span 3;
+}
+
+h1 {
+    font-size: 10rem;
+    font-family: 'supermercado one', 'segoe UI', serif;
+    text-align: center;
+    color: var(--title-color);
+    letter-spacing: 5px;
+}
+
+h1::first-letter {
+    font-size: 18rem;
+}
+
+.motto {
+    font-size: 2rem;
+    color: var(--anchor-color);
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 0.15px;
+    box-shadow: 1px 0.5px 20px 1px var(--text-color), -1px -0.5px 20px 1px var(--anchor-color);
+}
+
+.about, .services, .workhour, .portfolio {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.subheading {
+    font-size: 3.5rem;
+    color: var(--title-color);
+    font-family: 'noto serif hentaigana', serif;
+}
+
+.text {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin: 2px 0;
+}
+
+.services ul li {
+    font-size: 1.5rem;
+    list-style-type: circle;
+    color: var(--text-color);
+}
+
+font-face {
+    font-family: 'supermercado_one';
+    src: url('/Supermercado_One/SupermercadoOne-Regular.ttf') format('truetype');
+}
+
+#content {
+    grid-column: 1 / span 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    margin: 50px auto;
+    box-shadow: 1px 0 15px 1px #b5b5b5, -1px 0 15px 1px #b5b5b5;
+}
+
+#content img {
+    grid-row: 1 / span 2;
+    width: 100%;
+}
+
+.footer {
+    font-size: 1.5rem;
+    grid-column: 1 / span 3;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    background-color: var(--bg-color2);
+    color: var(--bg-color);
+    padding: 2px 0;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--anchor-color);
+}
+
+.footer a:hover {
+    background-color: var(--anchor-color);
+    color: var(--bg-color);
+    border-radius: 5px;
+}
+
+@media (min-width: 1024px) {
+    .header {
+        width: 70%;
+        margin: 0 auto;
+    }
+    .topbar {
+        width: 80%;
+        margin: 0 auto;
+    }
+    #content {
+        width: 75%;
+        margin: 50px auto;
+    }
+}
+
+@media (max-width: 720px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    .topbar {
+        height: 60px;
+    }
+    .mail-location-hour i {
+        font-size: 1.2rem;
+        width: 10px;
+        height: 12px;
+    }
+    .mail-location-hour a, .mail-location-hour span {
+        font-size: 1.3rem;
+    }
+    .footer {
+        width: 100%;
+    }
+}
